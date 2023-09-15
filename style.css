@@ -1,0 +1,137 @@
+/* 
+  Theme Name: Discovering Minnesota
+  Theme URI: https://saujanashafi.studio
+  Author: Saujana Shafi
+  Author URI: https://saujanashafi.studio
+  Description: Discovering Minnesota Wordpress Theme 
+  Requires at least: 5.3
+  Tested up to: 6.2
+  Requires PHP: 5.6
+  Version: 1.1
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/font/Satoshi-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/font/Satoshi-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/font/Satoshi-Bold.otf);
+  font-weight: 700;
+}
+
+:root {
+  /* Font Family */
+  --global--font-primary: "Satosi", sans-serif;
+
+  /* Font Size */
+  --global--font-size-base: 1.25rem;
+  --global--font-size-xs: 1rem;
+  --global--font-size-sm: 1.125rem;
+  --global--font-size-md: 1.25rem;
+  --global--font-size-lg: 1.5rem;
+  --global--font-size-xl: 2.25rem;
+  --global--font-size-xxl: 4rem;
+  --global--font-size-xxxl: 5rem;
+  --global--font-size-page-title: var(--global--font-size-xxl);
+  --global--letter-spacing: normal;
+
+  /* Colors */
+  --global--color-black: #000000;
+  --global--color-darkblue: #131824;
+  --global--color-lightblue: #35cfe8;
+  --global--color-yellow: #edae4b;
+  --global--color-red: #d82848;
+  --global--color-green: #1ca954;
+  --global--color-blue: #4b96db;
+  --global--color-purple: #7e53b4;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: var(--global--font-primary);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  background: linear-gradient(
+    90deg,
+    currentColor -2.3%,
+    rgba(35, 43, 62, 0) 96.42%
+  );
+}
+
+.active div h2 {
+  font-size: 52px !important;
+}
+
+.active div.w-7.h-7 {
+  width: 140px !important;
+  height: 160px !important;
+  padding: 12px;
+}
+
+.active-nav {
+  background: white;
+  color: var(--global--color-darkblue);
+}
+
+.current {
+  color: white !important;
+}
+
+.services-gradient {
+  background: linear-gradient(
+      0deg,
+      rgba(19, 24, 36, 0.5) 0%,
+      rgba(19, 24, 36, 0.5) 100%
+    ),
+    linear-gradient(87deg, #131824 8%, rgba(19, 24, 36, 0) 88.82%);
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .active div h2 {
+    font-size: 24px !important;
+  }
+
+  .active div.w-7.h-7 {
+    width: 64px !important;
+    height: 70px !important;
+  }
+
+  .services-gradient {
+    background: linear-gradient(
+        0deg,
+        rgba(19, 24, 36, 0.5) 0%,
+        rgba(19, 24, 36, 0.5) 100%
+      ),
+      linear-gradient(180deg, #131824 30%, rgba(19, 24, 36, 0) 88.82%);
+  }
+}
